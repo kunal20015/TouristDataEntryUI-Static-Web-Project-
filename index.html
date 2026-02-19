@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tourist Details</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg,#4facfe,#00f2fe);
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width: 70%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.notice{
+    background:#fffae6;
+    border-left:6px solid orange;
+    padding:12px;
+    margin-bottom:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+fieldset{
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+legend{
+    font-size:18px;
+    padding:5px 10px;
+    color:#333;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:5px;
+    border:1px solid #aaa;
+    font-size:14px;
+
+    box-sizing: border-box;   
+}
+
+
+input[type="radio"]{
+    width:auto;
+    margin-right:5px;
+}
+
+.radio-group{
+    margin-top:5px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+button[type="submit"]{
+    background:#28a745;
+    color:white;
+}
+
+button[type="submit"]:hover{
+    background:#1e7e34;
+}
+
+button[type="reset"]{
+    background:#dc3545;
+    color:white;
+}
+
+button[type="reset"]:hover{
+    background:#a71d2a;
+}
+
+.button-group{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="notice">
+Please fill the following details carefully. This form is only for Investigation Purpose.
+</div>
+
+<h1>Enquiry Form</h1>
+
+<form action="submitForm" method="post">
+
+<!-- Identification -->
+<fieldset>
+<legend><b>Common Basic Identification Details</b></legend>
+
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob" required>
+
+<label for="age">Age</label>
+<input type="number" id="age" name="age" min="0" placeholder="Enter age" required>
+
+<label>Gender</label>
+<div class="radio-group">
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
+</div>
+
+<label for="nationality">Nationality</label>
+<input type="text" id="nationality" name="nationality" required>
+
+<label for="passport">Passport / ID Number</label>
+<input type="text" id="passport" name="passport" required>
+
+</fieldset>
+
+
+<!-- Contact -->
+<fieldset>
+<legend><b>Contact Information</b></legend>
+
+<label for="mobile">Mobile Number</label>
+<input type="tel" id="mobile" name="mobile" required>
+
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+
+<label for="paddress">Permanent Address</label>
+<textarea id="paddress" name="paddress" rows="3" required></textarea>
+
+<label for="laddress">Local Stay Address</label>
+<textarea id="laddress" name="laddress" rows="3" required></textarea>
+
+</fieldset>
+
+
+<!-- Accommodation -->
+<fieldset>
+<legend><b>Accommodation Details</b></legend>
+
+<label for="hotel">Hotel Name</label>
+<input type="text" id="hotel" name="hotel" required>
+
+<label for="room">Room Number</label>
+<input type="text" id="room" name="room" required>
+
+<label for="checkin">Check-in Time</label>
+<input type="datetime-local" id="checkin" name="checkin" required>
+
+<label for="checkout">Check-out Time</label>
+<input type="datetime-local" id="checkout" name="checkout" required>
+
+<label for="booking">Booking Reference</label>
+<input type="text" id="booking" name="booking">
+
+</fieldset>
+
+
+<!-- Travel -->
+<fieldset>
+<legend><b>Travel Information</b></legend>
+
+<label for="arrival">Arrival Date</label>
+<input type="date" id="arrival" name="arrival" required>
+
+<label for="departure">Departure Date</label>
+<input type="date" id="departure" name="departure" required>
+
+<label for="visa">Visa Type / Status</label>
+<select id="visa" name="visa" required>
+<option value="">-- Select Visa Type --</option>
+<option value="Tourist">Tourist</option>
+<option value="Business">Business</option>
+<option value="Student">Student</option>
+<option value="Work">Work</option>
+<option value="Transit">Transit</option>
+</select>
+
+<label for="origin">Country of Origin</label>
+<input type="text" id="origin" name="origin" required>
+
+<label for="purpose">Purpose of Visit</label>
+<select id="purpose" name="purpose" required>
+<option value="">-- Select Purpose --</option>
+<option value="Tourism">Tourism</option>
+<option value="Business">Business</option>
+<option value="Education">Education</option>
+<option value="Medical">Medical</option>
+<option value="Other">Other</option>
+</select>
+
+</fieldset>
+
+<br>
+
+<div class="button-group">
+    <button type="submit">Submit Form</button>
+    <button type="reset">Clear Form</button>
+</div>
+
+
+</form>
+</div>
+
+</body>
+</html>
